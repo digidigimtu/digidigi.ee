@@ -1,0 +1,181 @@
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blue:    #1a3a5c;
+  --accent:  #0d7ec4;
+  --light:   #f4f7fa;
+  --text:    #1e2d3d;
+  --muted:   #5a6a7a;
+  --border:  #dce4ec;
+  --white:   #ffffff;
+  --radius:  8px;
+  --max-w:   860px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--white);
+}
+
+/* ── Layout ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Header ── */
+header {
+  background: var(--blue);
+  color: var(--white);
+  padding: 3.5rem 0 3rem;
+  text-align: center;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  font-size: 1.05rem;
+  color: #a8c8e8;
+  font-weight: 400;
+}
+
+/* ── Sections ── */
+section {
+  padding: 3.5rem 1.5rem;
+}
+
+section + section {
+  border-top: 1px solid var(--border);
+}
+
+section:nth-child(even) {
+  background: var(--light);
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+}
+
+p { margin-bottom: 1rem; color: var(--text); }
+p:last-child { margin-bottom: 0; }
+
+/* ── Activities list ── */
+.activities {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.activities li {
+  display: flex;
+  gap: 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+}
+
+.activities .icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.activities strong {
+  display: block;
+  color: var(--blue);
+  margin-bottom: 0.2rem;
+}
+
+.activities p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ── Contact ── */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-item .label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.contact-item a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover { text-decoration: underline; }
+
+address {
+  font-style: normal;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--blue);
+  color: #a8c8e8;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  header { padding: 2.5rem 0 2rem; }
+  section { padding: 2.5rem 1rem; }
+  .activities { grid-template-columns: 1fr; }
+}
