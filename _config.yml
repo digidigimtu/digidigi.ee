@@ -1,0 +1,11 @@
+# GitHub Pages build settings.
+# The site is plain HTML and CSS; this file only decides which files get published.
+
+# Dot-folders are skipped by default, so nothing private can be published by accident.
+# .well-known is the one exception: it holds security.txt.
+include:
+  - .well-known
+
+# Repository documentation, not part of the website.
+exclude:
+  - README.md
