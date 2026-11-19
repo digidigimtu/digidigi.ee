@@ -1,1 +1,3 @@
 oci-config/
+.claude/settings.local.json
+_site/
