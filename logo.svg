@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+  <title id="t">Digidigi MTÜ</title>
+  <rect width="64" height="64" rx="14" fill="#1a3a5c"/>
+  <g fill="none" stroke-width="7">
+    <path stroke="#ffffff" d="M11.5 21H15.5A11 11 0 0 1 15.5 43H11.5Z"/>
+    <path stroke="#4db5f5" d="M37.5 21H41.5A11 11 0 0 1 41.5 43H37.5Z"/>
+  </g>
+</svg>
