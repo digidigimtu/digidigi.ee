@@ -6,6 +6,8 @@
 include:
   - .well-known
 
-# Repository documentation, not part of the website.
+# Not part of the website. Setting this list replaces GitHub Pages' own default,
+# which is to leave out CNAME, so CNAME has to be named here as well.
 exclude:
   - README.md
+  - CNAME
